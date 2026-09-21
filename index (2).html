@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>رئیس رئال مادرید — فلورنتینو پرز ۲۰۲۶/۲۷</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F6FA;--panel:#FFF;--ink:#0B1D3F;--mute:#5D6785;--line:#DDE2EC;--gold:#B8912F;--gold-soft:#FBF3DC;--red:#C23A3A;--green:#1F8A5B;--safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}html,body{height:100%}
+body{font-family:Vazirmatn,"Noto Sans Arabic",system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;padding-top:var(--safe-t)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:8px 14px;cursor:pointer}
+button.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+button.danger{color:var(--red);border-color:var(--red);margin:20px 0}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 12px;background:var(--panel)}
+label{display:block;margin:10px 0;color:var(--mute);font-size:13px}
+h3{margin:18px 0 6px;font-size:15px}.hint{color:var(--mute);font-size:13px;margin:6px 0}
+header{position:fixed;top:var(--safe-t);inset-inline:0;height:56px;display:flex;justify-content:space-between;align-items:center;padding:0 16px;background:linear-gradient(180deg,#0B1D3F,#08152E);color:#fff;z-index:5;border-bottom:3px solid #C9A227}
+header .club{display:flex;align-items:center;gap:10px}header .club b{font-family:Cinzel,serif;letter-spacing:2px;font-size:16px}
+header .budget b{color:#E6C980;font-size:17px}.crest{width:34px;height:34px;object-fit:contain}
+main{padding:calc(56px + 12px) 14px calc(150px + var(--safe-b))}
+.tab{display:none}
+body[data-tab=office] #tab-office,body[data-tab=market] #tab-market,body[data-tab=lineup] #tab-lineup,body[data-tab=match] #tab-match,body[data-tab=tables] #tab-tables,body[data-tab=news] #tab-news,body[data-tab=mail] #tab-mail,body[data-tab=club] #tab-club,body[data-tab=fin] #tab-fin{display:block}
+nav{position:fixed;bottom:0;inset-inline:0;display:grid;grid-template-columns:repeat(9,1fr);background:var(--panel);border-top:1px solid var(--line);padding-bottom:var(--safe-b);z-index:5}
+nav button{border:0;border-radius:0;background:none;padding:9px 0;color:var(--mute);font-size:11px}
+nav button.on{color:var(--ink);font-weight:700;box-shadow:inset 0 3px 0 var(--gold)}
+#composer{position:fixed;inset-inline:0;bottom:calc(48px + var(--safe-b));display:none;gap:8px;padding:8px 12px;background:var(--bg);border-top:1px solid var(--line);z-index:4}
+body[data-tab=office] #composer{display:flex}#composer textarea{resize:none;max-height:100px}
+.msg{margin:14px 0;max-width:92%}.msg.me{margin-inline-start:auto;background:var(--ink);color:#fff;padding:9px 14px;border-radius:14px 14px 4px 14px;white-space:pre-wrap}
+.msg.ai{border-inline-start:3px solid var(--gold);padding:2px 12px;white-space:pre-wrap}
+.msg.sys{color:var(--mute);font-size:13px;text-align:center;max-width:100%}
+.msg .speaker{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.msg .speaker img{width:36px;height:36px;border-radius:50%;object-fit:cover;background:#EEF0F5}
+.note{display:inline-block;margin:6px 6px 0 0;background:var(--gold-soft);padding:1px 10px;border-radius:99px;font-size:13px}
+.warn{color:var(--red);font-size:12px;margin-top:4px}
+.seg{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}.seg button.on{background:var(--gold-soft);border-color:var(--gold)}
+.row-in{display:flex;gap:8px;margin:8px 0}.item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.item .grow{flex:1;min-width:0}.item small{color:var(--mute);display:block;line-height:1.4}
+.ovr{min-width:38px;text-align:center;font-weight:700;padding:2px 0;border-radius:6px;background:var(--gold-soft)}
+.item.start{background:linear-gradient(90deg,transparent,var(--gold-soft))}.item.inj .ovr{background:#F7DADA;color:var(--red)}
+.group{margin:16px 0 0;font-size:13px;color:var(--mute);font-weight:700}
+.board{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;padding:14px 0;border-bottom:2px solid var(--ink)}
+.board .sc{font-size:34px;font-weight:800;direction:ltr;letter-spacing:2px}
+.feed{margin-top:8px}.ev{display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ev .m{width:34px;color:var(--mute);direction:ltr;text-align:right}.ev.goal{font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 14px}td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:start}
+th{color:var(--mute);font-weight:500;font-size:12px}
+.rt{font-weight:700;text-align:center;border-radius:6px;padding:1px 6px;color:#fff;background:#8590AD}
+.rt.hi{background:var(--green)}.rt.lo{background:var(--red)}.rt.mv{background:var(--gold)}
+.meter{margin:12px 0}.meter .bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}.meter .bar i{display:block;height:100%;background:var(--ink)}
+.meter span{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+#toast{position:fixed;inset-inline:16px;bottom:calc(110px + var(--safe-b));background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9;text-align:center}
+#toast.show{opacity:1}
+.ph{width:36px;height:36px;border-radius:50%;object-fit:cover;background:#EEF0F5;flex:none}.ph.big{width:64px;height:64px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}.chips button{border-radius:99px;font-size:13px;padding:5px 12px;background:var(--gold-soft);border-color:#E7D7A5}
+#modal{position:fixed;inset:0;background:rgba(8,21,46,.55);z-index:20;display:flex;align-items:flex-end}#modal[hidden]{display:none}
+#modal .card{background:#fff;width:100%;max-height:88vh;overflow:auto;border-radius:16px 16px 0 0;padding:16px 16px calc(20px + var(--safe-b));border-top:4px solid #C9A227;position:relative}
+#modal .x{position:absolute;inset-inline-start:10px;top:10px;padding:2px 10px}
+.lg{width:24px;height:24px;object-fit:contain;flex:none}
+#tweets{position:fixed;top:calc(84px + env(safe-area-inset-top,0px));inset-inline-start:10px;width:min(300px,82vw);z-index:15;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.tw-pop{pointer-events:auto;animation:twin .35s ease-out}@keyframes twin{from{transform:translateX(-30px);opacity:0}to{transform:none;opacity:1}}
+.tw{display:flex;gap:8px;background:#fff;border:1px solid #DDE3EE;border-radius:14px;padding:10px;box-shadow:0 6px 18px rgba(8,21,46,.18);color:#0B1D3F;margin-top:6px}
+.tw-av{width:34px;height:34px;border-radius:50%;object-fit:cover;flex:none;background:#1d9bf0}
+.tw-b{min-width:0}.tw-h{display:flex;gap:4px;align-items:center;font-size:13px;flex-wrap:wrap}.tick{color:#1d9bf0;font-size:11px}
+.tw-h small{color:#8a93a6}.tw-t{font-size:13.5px;margin:3px 0 5px;line-height:1.6}
+.tw-f{display:flex;gap:10px;font-size:11px;color:#8a93a6}
+.scout{margin-top:8px;padding:8px 10px;background:#FBF3DC;border-radius:10px;font-size:12.5px;line-height:1.7}
+.standings{overflow-x:auto}.standings tr.rm{background:var(--gold-soft)}.standings .pts{font-weight:800;color:var(--gold)}
+/* News */
+.media-card{display:flex;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff}
+.media-card img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.media-card .info b{display:block}.media-card .info small{color:var(--mute)}
+.news-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.news-item .head{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.news-item .head img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.news-item .head b{font-size:14px}.news-item .head small{color:#8a93a6;display:block}
+.news-item .body{font-size:14.5px;line-height:1.65;margin:6px 0}
+.news-item .meta{font-size:11px;color:#8a93a6;display:flex;gap:12px}
+</style>
+</head>
+<body data-tab="office">
+<header>
+  <div class="club"><img class="crest" src="https://media.api-sports.io/football/teams/541.png" onerror="this.remove()"><span><b>REAL MADRID</b><small id="hDate"></small></span></div>
+  <div class="budget"><small>بودجه</small><b id="hBudget"></b></div>
+</header>
+
+<main>
+  <section class="tab" id="tab-office">
+    <div class="chips" id="chips">
+      <button data-t="با ایجنت بازیکن تماس می‌گیرم: ">🧑‍💼 ایجنت</button>
+      <button data-t="با باشگاه فروشنده مذاکره می‌کنم: ">🏟️ باشگاه</button>
+      <button data-t="پیام برای رسانه‌ها و خبرنگاران: ">📰 رسانه</button>
+      <button data-t="با هیئت‌مدیره جلسه می‌گذارم: ">🏛️ هیئت‌مدیره</button>
+      <button data-t="با مربی حرف می‌زنم: ">🧢 مربی</button>
+      <button data-t="فابریزیو رومانو را از وضعیت مذاکره مطلع کن: ">📰 رومانو</button>
+    </div>
+    <div id="chat"></div>
+  </section>
+
+  <section class="tab" id="tab-market">
+    <div class="seg"><button data-kind="player" class="on">بازیکن</button><button data-kind="coach">مربی</button></div>
+    <div class="row-in"><input id="q" placeholder="نام را بنویس (حداقل ۳ حرف، لاتین)" autocomplete="off"><button id="qGo" class="primary">جستجو</button></div>
+    <div id="results"></div>
+  </section>
+
+  <section class="tab" id="tab-lineup">
+    <div class="row-in"><select id="formation"></select><button id="auto">چیدمان خودکار مربی</button></div>
+    <p id="lineCount" class="hint"></p>
+    <div id="squad"></div>
+  </section>
+
+  <section class="tab" id="tab-match"><div id="matchView"></div></section>
+
+  <section class="tab" id="tab-tables">
+    <div class="seg" id="tableSeg">
+      <button data-league="140" class="on">لالیگا</button>
+      <button data-league="2">لیگ قهرمانان</button>
+    </div>
+    <p class="hint" id="tableHint">جدول زنده فصل ۲۰۲۶/۲۷</p>
+    <div id="standingsBox" class="standings"></div>
+    <button id="refreshTables" class="primary" style="margin-top:10px">به‌روزرسانی</button>
+  </section>
+
+  <!-- بخش اخبار رسانه‌های واقعی -->
+  <section class="tab" id="tab-news">
+    <h3>رسانه‌های فوتبال جهان</h3>
+    <p class="hint">اخبار تولیدشده توسط هوش مصنوعی با پروفایل و عکس واقعی رسانه‌ها</p>
+    <div id="mediaProfiles" style="display:flex;gap:8px;overflow-x:auto;padding:8px 0;margin-bottom:12px"></div>
+    <div class="row-in">
+      <button id="genNews" class="primary">تولید اخبار جدید</button>
+      <button id="refreshNews">بارگذاری مجدد</button>
+    </div>
+    <div id="newsFeed"></div>
+  </section>
+
+  <section class="tab" id="tab-mail">
+    <h3>صندوق ایمیل رسمی</h3>
+    <div class="chips" id="mailChips">
+      <button data-to="player">به بازیکن</button>
+      <button data-to="coach">به مربی</button>
+      <button data-to="club">به باشگاه</button>
+      <button data-to="agent">به ایجنت</button>
+      <button data-to="board">به هیئت‌مدیره</button>
+    </div>
+    <div id="mailCompose" hidden>
+      <label>گیرنده<input id="mailTo" dir="ltr"></label>
+      <label>موضوع<input id="mailSubject"></label>
+      <label>متن<textarea id="mailBody" rows="4"></textarea></label>
+      <button id="mailSend" class="primary">ارسال</button>
+      <div id="mailPreview" class="hint" hidden></div>
+    </div>
+    <h3>صندوق ورودی</h3>
+    <div id="mailList"></div>
+  </section>
+
+  <section class="tab" id="tab-club">
+    <div id="meters"></div>
+    <h3>تنظیمات اتصال</h3>
+    <label>آدرس Worker (FotMob + AI)<input id="setFm" placeholder="https://madrid.mmdcodmi81.workers.dev" dir="ltr"></label>
+    <label>آدرس سرور پولی (اختیاری)<input id="setServer" dir="ltr"></label>
+    <label>توکن<input id="setToken" dir="ltr"></label>
+    <div class="row-in">
+      <button id="saveSet" class="primary">ذخیره</button>
+      <button id="sync">همگام‌سازی</button>
+      <button id="fmTest">تست Worker</button>
+    </div>
+    <p id="syncMsg" class="hint"></p>
+    <h3>نتایج اخیر</h3>
+    <div id="results-list"></div>
+    <button id="reset" class="danger">شروع فصل از اول (ریست کامل)</button>
+  </section>
+
+  <section class="tab" id="tab-fin">
+    <div id="finBox"></div>
+    <button id="finGo" class="primary">دریافت اطلاعات مالی</button>
+    <h3>اختیارات رئیس (فلورنتینو پرز)</h3>
+    <div class="chips" id="powers">
+      <button data-t="می‌خواهم مربی فعلی اخراج شود. نظر هیئت‌مدیره را بگیر. ">اخراج مربی</button>
+      <button data-t="می‌خواهم قرارداد این بازیکن را فسخ کنیم: ">فسخ قرارداد</button>
+      <button data-t="اسپانسر جدید پیدا کن و مذاکره کن. ">اسپانسر</button>
+      <button data-t="قیمت بلیت و مرچندایز را بازنگری کن. ">بلیت و مرچندایز</button>
+      <button data-t="ساختار دستمزدها را بازنگری می‌کنم. ">دستمزدها</button>
+      <button data-t="جلسه هیئت‌مدیره برگزار کن. ">جلسه هیئت‌مدیره</button>
+    </div>
+  </section>
+</main>
+
+<form id="composer">
+  <textarea id="msg" rows="1" placeholder="هر چه می‌خواهی بنویس..."></textarea>
+  <button class="primary" type="submit">ارسال</button>
+</form>
+
+<nav>
+  <button data-tab="office" class="on">دفتر</button>
+  <button data-tab="market">بازار</button>
+  <button data-tab="lineup">ترکیب</button>
+  <button data-tab="match">مسابقه</button>
+  <button data-tab="tables">جدول</button>
+  <button data-tab="news">اخبار</button>
+  <button data-tab="mail">ایمیل</button>
+  <button data-tab="club">باشگاه</button>
+  <button data-tab="fin">مالی</button>
+</nav>
+<div id="toast"></div>
+<div id="modal" hidden></div>
+<div id="tweets"></div>
+
+<script>
+'use strict';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), rnd=(a,b)=>a+Math.random()*(b-a);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const KEY='madrid-ceo-v4', MADRID=541, SEASON=2026;
+const POS={Goalkeeper:'GK',Defender:'DF',Midfielder:'MF',Attacker:'FW'};
+const POSFA={GK:'دروازه‌بان',DF:'مدافع',MF:'هافبک',FW:'مهاجم'};
+const FORM={'4-3-3':[4,3,3],'4-4-2':[4,4,2],'3-5-2':[3,5,2],'4-2-3-1':[4,5,1],'5-3-2':[5,3,2]};
+const addDays=(iso,n)=>{const d=new Date(iso+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+
+/* رسانه‌های واقعی با عکس پروفایل */
+const MEDIA = [
+  {name:'Fabrizio Romano',handle:'@FabrizioRomano',img:'https://pbs.twimg.com/profile_images/1741753635158024192/j0m8Ucvv.jpg',color:'#1d9bf0'},
+  {name:'Marca',handle:'@marca',img:'https://pbs.twimg.com/profile_images/1607710682601840640/8Q0Q0Q0Q_400x400.jpg',color:'#c00'},
+  {name:'AS',handle:'@diarioas',img:'https://pbs.twimg.com/profile_images/1600000000000000000/as_logo.png',color:'#e30613'},
+  {name:'Mundo Deportivo',handle:'@mundodeportivo',img:'https://pbs.twimg.com/profile_images/1234567890/md.jpg',color:'#003366'},
+  {name:'GOAL',handle:'@goal',img:'https://pbs.twimg.com/profile_images/1490000000000000000/goal.png',color:'#000'},
+  {name:'ESPN FC',handle:'@ESPNFC',img:'https://pbs.twimg.com/profile_images/1600000000000000000/espn.png',color:'#d00'},
+  {name:'Sky Sports',handle:'@SkySportsNews',img:'https://pbs.twimg.com/profile_images/1600000000000000000/sky.png',color:'#007'},
+  {name:"L'Équipe",handle:'@lequipe',img:'https://pbs.twimg.com/profile_images/1600000000000000000/lequipe.png',color:'#c00'},
+  {name:'The Athletic',handle:'@TheAthleticFC',img:'https://pbs.twimg.com/profile_images/1600000000000000000/athletic.png',color:'#000'},
+  {name:'Sport',handle:'@Sport_ES',img:'https://pbs.twimg.com/profile_images/1600000000000000000/sport.png',color:'#f60'}
+];
+/* fallback عکس‌ها برای جلوگیری از شکستگی */
+MEDIA.forEach(m=>{
+  if(!m.img || m.img.includes('000000')) m.img = `https://ui-avatars.com/api/?name=${encodeURIComponent(m.name)}&background=0B1D3F&color=fff&size=128`;
+});
+
+const SPEAKER_PHOTOS = {
+  'José Mourinho':'https://img.a.transfermarkt.technology/portrait/big/172-1661257042.jpg',
+  'Florentino Pérez':'https://img.a.transfermarkt.technology/portrait/big/123-1442410346.jpg',
+  'Fabrizio Romano':'https://pbs.twimg.com/profile_images/1741753635158024192/j0m8Ucvv.jpg',
+  'هیئت‌مدیره':'https://media.api-sports.io/football/teams/541.png',
+  'ایجنت':'https://ui-avatars.com/api/?name=Agent&background=B8912F&color=fff',
+  'رسانه':'https://ui-avatars.com/api/?name=Media&background=5D6785&color=fff',
+  'باشگاه':'https://ui-avatars.com/api/?name=Club&background=0B1D3F&color=fff'
+};
+
+const REAL_COACH='José Mourinho';
+const REAL_SQUAD=()=>[['Courtois','GK',34,89],['Lunin','GK',27,79],['Asencio','DF',23,77],['Éder Militão','DF',28,82],['Dean Huijsen','DF',21,79],['Trent Alexander-Arnold','DF',28,84],['Ibrahima Konaté','DF',27,82],['Marc Cucurella','DF',28,82],['Álvaro Carreras','DF',23,79],['Antonio Rüdiger','DF',33,84],['Ferland Mendy','DF',31,78],['Denzel Dumfries','DF',30,80],['Jude Bellingham','MF',23,89],['Eduardo Camavinga','MF',24,83],['Federico Valverde','MF',28,86],['Aurélien Tchouaméni','MF',26,83],['Arda Güler','MF',21,83],['Bernardo Silva','MF',32,86],['Thiago Pitarch','MF',19,68],['Vinícius Júnior','FW',26,89],['Endrick','FW',20,78],['Kylian Mbappé','FW',27,91],['Rodrygo','FW',25,82],['Carlos Espí','FW',21,68],['Brahim Díaz','FW',27,81],['Yan Diomande','FW',20,82]].map(([name,pos,age,ovr],i)=>({id:'rm'+i,name,pos,age,ovr,value:null,est:true}));
+const T=(id,name)=>({id,name}), RM=T(MADRID,'رئال مادرید');
+const REAL_FIXTURES=()=>[['2026-09-20','لالیگا',0,T(9001,'Atlético Madrid'),82],['2026-10-10','لالیگا',1,T(9002,'Villarreal'),78],['2026-10-14','لیگ قهرمانان',0,T(9003,'Roma'),78],['2026-10-18','لالیگا',1,T(9004,'Sevilla'),75],['2026-10-21','لیگ قهرمانان',1,T(9005,'RB Leipzig'),80],['2026-10-25','لالیگا',0,T(9006,'Barcelona'),87],['2026-11-04','لیگ قهرمانان',0,T(9007,'AEK Athens'),72],['2026-11-24','لیگ قهرمانان',1,T(9008,'PSV'),78],['2026-12-09','لیگ قهرمانان',0,T(9009,'Arsenal'),86]].map(([date,comp,home,opp,s],i)=>({id:'d'+i,date,comp,home:home?RM:opp,away:home?opp:RM,demoStrength:s}));
+const REAL_RESULTS=[{text:'Real Betis 1-0 رئال مادرید',outcome:'L'},{text:'رئال مادرید 2-1 Inter',outcome:'W'},{text:'رئال مادرید 4-1 Rayo Vallecano',outcome:'W'},{text:'Elche 2-3 رئال مادرید',outcome:'W'},{text:'Atlético Madrid 1-0 رئال مادرید',outcome:'L'}];
+const DEMO_LALIGA=[{pos:1,team:'Barcelona',p:7,w:7,d:0,l:0,gd:24,pts:21},{pos:2,team:'Atlético Madrid',p:7,w:5,d:1,l:1,gd:9,pts:16},{pos:3,team:'Real Betis',p:7,w:5,d:1,l:1,gd:2,pts:16},{pos:4,team:'Real Madrid',p:7,w:5,d:0,l:2,gd:10,pts:15},{pos:5,team:'Sevilla',p:7,w:4,d:1,l:2,gd:1,pts:13},{pos:6,team:'Alavés',p:7,w:3,d:2,l:2,gd:5,pts:11},{pos:7,team:'Deportivo',p:7,w:2,d:4,l:1,gd:2,pts:10},{pos:8,team:'Real Sociedad',p:7,w:3,d:1,l:3,gd:-4,pts:10},{pos:9,team:'Villarreal',p:7,w:2,d:2,l:3,gd:1,pts:8},{pos:10,team:'Athletic Club',p:6,w:2,d:2,l:2,gd:1,pts:8}];
+
+const fresh=()=>({server:'',token:'',date:'2026-09-22',budget:150,board:62,coach:58,fans:55,squad:REAL_SQUAD(),lineup:[],formation:'4-3-3',fixtures:REAL_FIXTURES(),results:REAL_RESULTS.slice(),chat:[],real:false,coachName:REAL_COACH,fm:'https://madrid.mmdcodmi81.workers.dev',done:{},coachEdited:false,moved:{},sponsors:[],clubInfo:'',mails:[],rel:{},newsCache:[]});
+function load(){try{return{...fresh(),...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{return fresh()}}
+let S=load();const save=()=>localStorage.setItem(KEY,JSON.stringify(S));
+const isInj=p=>p.injUntil&&p.injUntil>S.date;
+const normUrl=u=>{u=String(u||'').trim();if(u&&!/^https?:\/\//i.test(u))u='https://'+u;return u.replace(/\/+$/,'')};
+
+async function api(path,opts={}){if(!S.server)throw new Error('سرور تنظیم نشده');const r=await fetch(S.server.replace(/\/$/,'')+path,{...opts,headers:{'Content-Type':'application/json','x-app-token':S.token||''}});if(!r.ok)throw new Error((await r.text()).slice(0,160)||r.status);return r.json()}
+const football=(p,q={})=>api('/api/football/'+p+'?'+new URLSearchParams(q));
+
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2600)}
+function show(tab){document.body.dataset.tab=tab;$$('nav button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));({office:renderChat,market:()=>{},lineup:renderLineup,match:renderFixtures,tables:renderTables,news:renderNews,mail:renderMail,club:renderClub,fin:renderFin}[tab])();window.scrollTo(0,tab==='office'?document.body.scrollHeight:0)}
+function renderHeader(){$('#hDate').textContent=new Date(S.date).toLocaleDateString('fa-IR',{day:'numeric',month:'long',year:'numeric'});$('#hBudget').textContent=S.budget.toLocaleString('fa-IR')+' م€'}
+$$('nav button').forEach(b=>b.onclick=()=>show(b.dataset.tab));
+
+/* چت */
+function renderChat(){const box=$('#chat');if(!S.chat.length)box.innerHTML=`<div class="msg sys">دفتر رئیس باشگاه — فلورنتینو پرز<br>فصل ۲۰۲۶/۲۷ | مربی: ${esc(S.coachName)} | بودجه: ${S.budget} م€<br>هر تصمیمی داری بنویس.</div>`;else box.innerHTML=S.chat.map(m=>{if(m.role==='me')return`<div class="msg me">${esc(m.text)}</div>`;if(m.role==='sys')return`<div class="msg sys">${esc(m.text)}</div>`;const sp=m.speaker?`<div class="speaker"><img src="${esc(SPEAKER_PHOTOS[m.speaker]||SPEAKER_PHOTOS['رسانه'])}" onerror="this.style.display='none'"><b>${esc(m.speaker)}</b></div>`:'';const news=(m.news||[]).length?`<div class="news">${m.news.map(tweetHTML).join('')}</div>`:'';const notes=(m.notes||[]).map(n=>`<span class="note">${esc(n)}</span>`).join('');return`<div class="msg ai">${sp}${esc(m.text)}${(m.scout||[]).length?`<div class="scout">🔎 ${m.scout.map(esc).join(' · ')}</div>`:''}${news}${notes}${m.verified===false?'<div class="warn">⚠️ تقریبی</div>':''}</div>`}).join('');renderHeader();save()}
+function detectSpeaker(t){if(/مورینیو|mourinho/i.test(t))return'José Mourinho';if(/فابریزیو|romano|here we go/i.test(t))return'Fabrizio Romano';if(/هیئت|مدیره/i.test(t))return'هیئت‌مدیره';if(/ایجنت|agent/i.test(t))return'ایجنت';if(/باشگاه|club/i.test(t))return'باشگاه';return'رسانه'}
+function applyReply(r){
+  const e = r.effects || {};
+  S.rel = S.rel || {};
+  if(r.rel && r.rel.club) S.rel[r.rel.club] = clamp((S.rel[r.rel.club]??50) + (+r.rel.delta||0), 0, 100);
+  S.board = clamp(S.board + (+e.board||0), 0, 100);
+  S.coach = clamp(S.coach + (+e.coach||0), 0, 100);
+  S.fans = clamp(S.fans + (+e.fans||0), 0, 100);
+  S.budget = +(S.budget + (+e.budget||0)).toFixed(1);
+  if(+r.days) S.date = addDays(S.date, clamp(+r.days, 0, 60));
+  const notes = [];
+  (r.actions||[]).forEach(a=>{
+    if((a.type==='sign'||a.type==='sell') && !windowOpen(S.date)){ notes.push('⛔ بازار نقل‌وانتقالات بسته است'); return; }
+    if(a.type==='fire_coach'){
+      S.coachName = ''; S.coachEdited = true; S.coach = 50; S.lineup = [];
+      notes.push('🚪 مربی اخراج شد. ترکیب فعلی لغو شد تا مربی جدید چیده شود.');
+    } else if(a.type==='hire_coach' && a.name){
+      S.coachName = a.name; S.coachEdited = true; S.lineup = [];
+      notes.push('🧢 مربی جدید: ' + a.name + ' — او ترکیب را از نو می‌چیند.');
+    } else if(a.type==='sponsor' && a.name){
+      S.sponsors.push({name:a.name, value:+a.value||0, note:a.note||''});
+      notes.push('🤝 اسپانسر جدید: ' + a.name);
+    } else if(a.type==='release' && a.name){
+      S.squad = S.squad.filter(p=>p.name !== a.name);
+      S.lineup = []; S.moved[a.name] = 'out';
+      notes.push('✂️ فسخ قرارداد: ' + a.name);
+    } else if(a.type==='sign' && a.name){
+      const pos = ['GK','DF','MF','FW'].includes(a.pos) ? a.pos : 'MF';
+      S.moved[a.name] = 'RM';
+      S.squad.push({
+        id: 'n' + Date.now() + Math.floor(Math.random()*999),
+        name: a.name,
+        pos,
+        age: +a.age || 25,
+        ovr: clamp(+a.ovr || 78, 50, 96),
+        value: +a.value || null
+      });
+      S.lineup = []; // مربی باید دوباره ترکیب را بچیند
+      notes.push(`✅ قرارداد ${a.name} امضا شد (${POSFA[pos]}) — مربی ترکیب را به‌روز می‌کند.`);
+    } else if(a.type==='sell' && a.name){
+      const i = S.squad.findIndex(p=>p.name === a.name);
+      if(i >= 0){
+        S.lineup = S.lineup.filter(id => id !== S.squad[i].id);
+        S.squad.splice(i, 1);
+        S.moved[a.name] = 'out';
+        notes.push('👋 فروش: ' + a.name);
+      }
+    }
+  });
+  S.chat.push({
+    role: 'ai',
+    text: r.narration || '',
+    news: r.news || [],
+    scout: r.scout || [],
+    notes,
+    verified: r.verified !== false,
+    speaker: r.speaker || detectSpeaker(r.narration || '')
+  });
+}
+async function sendChat(text){S.chat.push({role:'me',text});renderChat();if(!S.fm&&!S.server){S.chat.push({role:'sys',text:'آدرس Worker را در تب باشگاه تنظیم کن.'});return renderChat()}const wait={role:'sys',text:'⏳ در حال شبیه‌سازی...'};S.chat.push(wait);renderChat();try{const state={date:S.date,budget:S.budget,board:S.board,coach:S.coach,fans:S.fans,formation:S.formation,coachName:S.coachName,results:S.results.slice(-5).map(r=>r.text),squad:S.squad.map(p=>({name:p.name,pos:p.pos,ovr:p.ovr,age:p.age}))};const history=S.chat.filter(m=>m!==wait).slice(-10);const r=S.server?await api('/api/chat',{method:'POST',body:JSON.stringify({message:text,state,history})}):await freeChat(text,state,history);S.chat.splice(S.chat.indexOf(wait),1);applyReply(r);showTweets(r.news)}catch(e){S.chat.splice(S.chat.indexOf(wait),1);S.chat.push({role:'sys',text:'⚠️ '+e.message})}renderChat();window.scrollTo(0,document.body.scrollHeight)}
+$('#composer').onsubmit=e=>{e.preventDefault();const t=$('#msg').value.trim();if(!t)return;$('#msg').value='';sendChat(t)};
+
+/* بازار */
+let kind='player';$$('.seg button').forEach(b=>b.onclick=()=>{kind=b.dataset.kind;$$('.seg button').forEach(x=>x.classList.toggle('on',x===b));$('#results').innerHTML=''});
+$('#qGo').onclick=search;$('#q').onkeydown=e=>e.key==='Enter'&&search();
+async function search(){const q=$('#q').value.trim(),box=$('#results');if(q.length<3)return toast('حداقل ۳ حرف');box.innerHTML='<p class="hint">جستجو...</p>';try{if(S.fm)return await fmSearch(q,box);throw new Error('Worker تنظیم نشده')}catch(e){box.innerHTML=`<p class="hint">⚠️ ${esc(e.message)}</p>`}}
+$('#results').onclick=async e=>{const it=e.target.closest('.item');if(!it)return;const n=it.dataset.n;if(!e.target.closest('button'))return openProfile(kind,it.dataset.id,n);if(e.target.classList.contains('o')){S.target={id:it.dataset.id,name:n,kind};$('#msg').value=kind==='player'?`می‌خواهم ${n} را بخرم. مذاکره کن: `:`می‌خواهم با ${n} مذاکره کنم. `;show('office');$('#msg').focus()}};
+
+/* ترکیب */
+$('#formation').innerHTML=Object.keys(FORM).map(f=>`<option>${f}</option>`).join('');
+$('#formation').onchange=e=>{S.formation=e.target.value;S.lineup=[];renderLineup()};
+function autoPick(sq,f){
+  const [d,m,fw]=FORM[f], need={GK:1,DF:d,MF:m,FW:fw}, pick=[], avail=sq.filter(p=>!isInj(p)).sort((a,b)=>b.ovr-a.ovr);
+  for(const pos of ['GK','DF','MF','FW']) pick.push(...avail.filter(p=>p.pos===pos).slice(0,need[pos]));
+  for(const p of avail) if(pick.length<11 && !pick.includes(p)) pick.push(p);
+  return pick.slice(0,11);
+}
+function autoBench(sq, xi){
+  return sq.filter(p=>!isInj(p) && !xi.includes(p)).sort((a,b)=>b.ovr-a.ovr).slice(0,7);
+}
+function lineupError(xi,f=S.formation){
+  if(xi.length!==11) return `باید ۱۱ بازیکن اصلی (${xi.length})`;
+  const [d,m,fw]=FORM[f], c=k=>xi.filter(p=>p.pos===k).length;
+  if(c('GK')!==1) return 'دقیقاً یک دروازه‌بان لازم است';
+  if(c('DF')!==d || c('MF')!==m || c('FW')!==fw) return `ترکیب با چیدمان ${f} نمی‌خواند (نیاز: ${d} مدافع، ${m} هافبک، ${fw} مهاجم)`;
+  if(xi.some(isInj)) return 'بازیکن مصدوم در ترکیب اصلی است';
+  return '';
+}
+function renderLineup(){
+  const xi = autoPick(S.squad, S.formation);
+  S.lineup = xi.map(p=>p.id);
+  const bench = autoBench(S.squad, xi);
+  $('#formation').value = S.formation;
+  $('#lineCount').textContent = `ترکیب را مربی (${S.coachName||'—'}) اعلام می‌کند. تو فقط می‌توانی مربی را عوض کنی.`;
+  let html = `<div class="group">⚪ ترکیب اصلی (${S.formation})</div>`;
+  ['GK','DF','MF','FW'].forEach(pos=>{
+    const list = xi.filter(p=>p.pos===pos);
+    if(list.length) html += list.map(p=>`<div class="item start" data-id="${p.id}">${photo(p)}<span class="ovr">${p.ovr}</span><div class="grow"><b>${esc(p.name)}</b><small>${POSFA[pos]} · ${p.age} ساله</small></div><span>اصلی</span></div>`).join('');
+  });
+  html += `<div class="group">🪑 نیمکت (ذخیره)</div>`;
+  html += bench.length ? bench.map(p=>`<div class="item" data-id="${p.id}">${photo(p)}<span class="ovr">${p.ovr}</span><div class="grow"><b>${esc(p.name)}</b><small>${POSFA[p.pos]} · ${p.age} ساله</small></div><span>ذخیره</span></div>`).join('') : '<p class="hint">نیمکت خالی</p>';
+  html += `<div class="group">📋 کل لیست بازیکنان</div>`;
+  ['GK','DF','MF','FW'].forEach(pos=>{
+    html += `<div class="group" style="margin-top:8px">${POSFA[pos]}</div>` + S.squad.filter(p=>p.pos===pos).sort((a,b)=>b.ovr-a.ovr).map(p=>{
+      const isStart = S.lineup.includes(p.id);
+      const isBench = bench.some(b=>b.id===p.id);
+      return `<div class="item ${isStart?'start':''} ${isInj(p)?'inj':''}" data-id="${p.id}">${photo(p)}<span class="ovr">${p.ovr}</span><div class="grow"><b>${esc(p.name)}</b><small>${p.age} ساله${isInj(p)?' · مصدوم تا '+p.injUntil:''}</small></div><span>${isStart?'⚪ اصلی':isBench?'🪑 ذخیره':''}</span></div>`;
+    }).join('');
+  });
+  $('#squad').innerHTML = html;
+  save();
+}
+$('#squad').onclick = e=>{const it=e.target.closest('.item'); if(it) openProfile('player', it.dataset.id, '')};
+$('#auto').onclick = ()=>{ S.lineup = autoPick(S.squad, S.formation).map(p=>p.id); renderLineup(); };
+
+/* مسابقه (ساده‌شده برای پایداری) */
+function strength(xi){const av=a=>a.length?a.reduce((s,p)=>s+p.ovr,0)/a.length:55,f=k=>xi.filter(p=>p.pos===k);return{gk:av(f('GK')),def:av(f('DF')),mid:av(f('MF')),att:av(f('FW'))}}
+function simulate(H,A){const side={h:{...H,st:strength(H.xi),g:0},a:{...A,st:strength(A.xi),g:0}};const events=[];for(let m=1;m<=90;m++){if(Math.random()<0.15){const k=Math.random()<0.55?'h':'a',at=side[k],df=side[k==='h'?'a':'h'];const sh=at.xi[Math.floor(Math.random()*at.xi.length)];if(Math.random()<0.35){at.g++;events.push({m,k,type:'goal',text:`⚽ گل! ${sh.name}`})}else events.push({m,k,type:'miss',text:`${sh.name} شوت زد`})}}return{hg:side.h.g,ag:side.a.g,events,ratings:{h:H.xi.map(p=>({name:p.name,pos:p.pos,g:0,a:0,y:0,r:0,rating:+(6.5+rnd(-1,1.5)).toFixed(1)})),a:A.xi.map(p=>({name:p.name,pos:p.pos,g:0,a:0,y:0,r:0,rating:+(6.5+rnd(-1,1.5)).toFixed(1)}))}}}
+function renderFixtures(){
+  const box=$('#matchView');
+  if(!S.fixtures.length){box.innerHTML='<p class="hint">بازی‌ای در برنامه نیست.</p>';return}
+  box.innerHTML = '<p class="hint">قبل از هر بازی، مربی ترکیب اصلی و نیمکت را اعلام می‌کند. تو فقط می‌توانی بازی را تأیید کنی.</p>' +
+    S.fixtures.map((f,i)=>`<div class="item"><div class="grow"><b>${esc(f.home.name)} - ${esc(f.away.name)}</b><small>${esc(f.date.slice(0,10))} · ${esc(f.comp)}</small></div><button class="primary" data-i="${i}">مشاهده ترکیب و شروع</button></div>`).join('');
+}
+$('#matchView').onclick = e=>{
+  const b = e.target.closest('button[data-i]');
+  if(b) showTeamSheet(+b.dataset.i);
+  if(e.target.id==='confirmKickoff') startMatchFromSheet();
+  if(e.target.id==='backFixtures') renderFixtures();
+};
+
+let pendingMatch = null;
+
+function showTeamSheet(i){
+  const f = S.fixtures[i];
+  const xi = autoPick(S.squad, S.formation);
+  const err = lineupError(xi);
+  if(err){ toast(err); return show('lineup'); }
+  const bench = autoBench(S.squad, xi);
+  pendingMatch = { i, f, xi, bench };
+  const box = $('#matchView');
+  let html = `<h3>📋 اعلام ترکیب توسط ${esc(S.coachName||'مربی')}</h3>
+    <p class="hint">${esc(f.home.name)} vs ${esc(f.away.name)} · ${esc(f.comp)} · ${esc(f.date.slice(0,10))}</p>
+    <p class="hint">چیدمان: <b>${S.formation}</b></p>
+    <div class="group">⚪ ترکیب اصلی (۱۱ نفر)</div>`;
+  ['GK','DF','MF','FW'].forEach(pos=>{
+    const list = xi.filter(p=>p.pos===pos);
+    list.forEach(p=>{
+      html += `<div class="item start">${photo(p)}<span class="ovr">${p.ovr}</span><div class="grow"><b>${esc(p.name)}</b><small>${POSFA[pos]} · ${p.age} ساله</small></div></div>`;
+    });
+  });
+  html += `<div class="group">🪑 نیمکت (ذخیره)</div>`;
+  bench.forEach(p=>{
+    html += `<div class="item">${photo(p)}<span class="ovr">${p.ovr}</span><div class="grow"><b>${esc(p.name)}</b><small>${POSFA[p.pos]} · ${p.age} ساله</small></div></div>`;
+  });
+  html += `<div class="row-in" style="margin-top:16px">
+    <button class="primary" id="confirmKickoff">تأیید و شروع بازی</button>
+    <button id="backFixtures">بازگشت</button>
+  </div>`;
+  box.innerHTML = html;
+}
+
+function startMatchFromSheet(){
+  if(!pendingMatch) return;
+  const { i, f, xi } = pendingMatch;
+  const weHome = f.home.id === MADRID;
+  const opp = weHome ? f.away : f.home;
+  const us = { name: 'رئال مادرید', xi };
+  const them = { name: opp.name, xi: autoPick(demoTeam(opp.name, f.demoStrength||76, 9000), '4-3-3') };
+  const res = weHome ? simulate(us, them) : simulate(them, us);
+  const H = weHome ? us : them, A = weHome ? them : us;
+  const box = $('#matchView');
+  box.innerHTML = `<div class="board"><div><b>${esc(H.name)}</b></div><div><div class="sc" id="sc">0 - 0</div><small id="mn">۰'</small></div><div><b>${esc(A.name)}</b></div></div>
+    <p class="hint"><button id="skip">رد کردن انیمیشن</button></p><div class="feed" id="feed"></div><div id="after"></div>`;
+  let idx=0, gh=0, ga=0, done=false;
+  const step = ()=>{
+    const ev = res.events[idx++]; if(!ev) return;
+    if(ev.type==='goal') ev.k==='h' ? gh++ : ga++;
+    $('#sc').textContent = `${gh} - ${ga}`;
+    $('#mn').textContent = ev.m + "'";
+    if(ev.type!=='miss') $('#feed').insertAdjacentHTML('afterbegin', `<div class="ev ${ev.type}"><span class="m">${ev.m}'</span><span>${esc(ev.text)}</span></div>`);
+  };
+  const finish = ()=>{ if(done) return; done=true; clearInterval(t); $('#mn').textContent='پایان'; finishMatch(f, res, weHome, H, A); };
+  const t = setInterval(()=>{ if(idx>=res.events.length) finish(); else step(); }, 300);
+  $('#skip').onclick = ()=>{ clearInterval(t); while(idx<res.events.length) step(); finish(); };
+}
+function demoTeam(prefix,base,idBase){const out=[];let n=0;[['GK',3],['DF',8],['MF',7],['FW',5]].forEach(([pos,c])=>{for(let i=1;i<=c;i++)out.push({id:idBase+(++n),name:`${prefix} ${POSFA[pos]} ${i}`,pos,age:Math.round(rnd(19,34)),ovr:Math.round(clamp(base+rnd(-7,7)-i*0.8,50,95))})});return out}
+function finishMatch(f,res,weHome,H,A){const gf=weHome?res.hg:res.ag,gaa=weHome?res.ag:res.hg;const outcome=gf>gaa?'W':gf<gaa?'L':'D';const d={W:[3,4,2],D:[0,-1,0],L:[-4,-6,-3]}[outcome];S.board=clamp(S.board+d[0],0,100);S.fans=clamp(S.fans+d[1],0,100);S.coach=clamp(S.coach+d[2],0,100);const text=`${H.name} ${res.hg}-${res.ag} ${A.name}`;S.results.push({text,outcome,sim:true});S.done[f.id]=1;S.date=addDays(S.date,4);S.fixtures.splice(S.fixtures.indexOf(f),1);renderHeader();save();$('#after').innerHTML=`<h3>نتیجه: ${outcome==='W'?'برد':outcome==='L'?'باخت':'مساوی'}</h3><button class="primary" id="fb">بازخورد رسانه‌ها</button> <button id="back">بازگشت</button>`;$('#fb').onclick=()=>{show('office');sendChat(`نتیجه بازی: ${text}. واکنش مربی، هیئت‌مدیره و رسانه‌ها (فابریزیو رومانو) را نشان بده.`)};$('#back').onclick=renderFixtures}
+
+/* جدول */
+function renderTables(){renderStandings($('#tableSeg button.on')?.dataset.league||'140')}
+$$('#tableSeg button').forEach(b=>b.onclick=()=>{$$('#tableSeg button').forEach(x=>x.classList.toggle('on',x===b));renderStandings(b.dataset.league)});
+$('#refreshTables').onclick=()=>renderTables();
+function renderStandings(lid){const box=$('#standingsBox');if(lid==='140'){box.innerHTML=`<table><tr><th>#</th><th>تیم</th><th>ب</th><th>پ</th><th>ت</th><th>ش</th><th>تفاضل</th><th>امتیاز</th></tr>`+DEMO_LALIGA.map(t=>`<tr class="${t.team==='Real Madrid'?'rm':''}"><td>${t.pos}</td><td>${esc(t.team)}</td><td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td><td>${t.gd>0?'+':''}${t.gd}</td><td class="pts">${t.pts}</td></tr>`).join('')+'</table>';$('#tableHint').textContent='جدول لالیگا ۲۰۲۶/۲۷ (سپتامبر) — رئال رتبه ۴'}else box.innerHTML='<p class="hint">برای لیگ قهرمانان Worker را تست کن.</p>'}
+
+/* اخبار */
+function renderNews(){
+  const profiles=$('#mediaProfiles');
+  profiles.innerHTML=MEDIA.map(m=>`<div class="media-card" style="min-width:140px;flex:none"><img src="${m.img}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(m.name)}&background=0B1D3F&color=fff'"><div class="info"><b>${esc(m.name)}</b><small>${esc(m.handle)}</small></div></div>`).join('');
+  const feed=$('#newsFeed');
+  if(S.newsCache.length)feed.innerHTML=S.newsCache.map(n=>newsCard(n)).join('');
+  else feed.innerHTML='<p class="hint">روی «تولید اخبار جدید» بزن تا اخبار واقعی‌سبک ساخته شود.</p>';
+}
+function newsCard(n){const m=MEDIA.find(x=>x.name===n.src)||MEDIA[0];return`<div class="news-item"><div class="head"><img src="${m.img}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(n.src)}&background=0B1D3F&color=fff'"><div><b>${esc(n.src)}</b><small>${esc(n.handle||m.handle)} · الان</small></div></div><div class="body">${esc(n.headline)}</div><div class="meta"><span>💬 ${40+Math.floor(Math.random()*200)}</span><span>🔁 ${10+Math.floor(Math.random()*80)}</span><span>❤ ${80+Math.floor(Math.random()*900)}</span></div></div>`}
+$('#genNews').onclick=async()=>{const feed=$('#newsFeed');feed.innerHTML='<p class="hint">⏳ در حال تولید اخبار توسط هوش مصنوعی...</p>';try{const r=await fetch(S.fm.replace(/\/$/,'')+'/news',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:'Real Madrid 2026',count:6,date:S.date})});const d=await r.json();S.newsCache=d.news||[];save();renderNews();toast(d.generated?'اخبار تولید شد':'اخبار پیش‌فرض')}catch(e){feed.innerHTML=`<p class="hint">⚠️ ${esc(e.message)}</p>`}};
+$('#refreshNews').onclick=()=>renderNews();
+
+/* ایمیل */
+function renderMail(){const list=$('#mailList');list.innerHTML=S.mails.length?S.mails.slice().reverse().map(m=>`<div class="item"><div class="grow"><b>${esc(m.subject)}</b><small>به: ${esc(m.to)} · ${esc(m.date)}</small></div></div>`).join(''):'<p class="hint">ایمیلی نیست.</p>'}
+$('#mailChips').onclick=e=>{const b=e.target.closest('button');if(!b)return;$('#mailCompose').hidden=false;$('#mailTo').value='';$('#mailSubject').value='';$('#mailBody').value=''};
+$('#mailSend').onclick=async()=>{const to=$('#mailTo').value.trim(),sub=$('#mailSubject').value.trim(),body=$('#mailBody').value.trim();if(!to||!sub||!body)return toast('همه فیلدها');const prev=$('#mailPreview');prev.hidden=false;prev.textContent='⏳ ارسال...';try{await sendChat(`ایمیل رسمی از فلورنتینو پرز به ${to}:\nموضوع: ${sub}\n\n${body}\n\nپاسخ واقع‌گرایانه را نشان بده.`);S.mails.push({to,subject:sub,body,date:S.date});prev.textContent='✅ ارسال شد. پاسخ در دفتر.';save();renderMail()}catch(e){prev.textContent='⚠️ '+e.message}};
+
+/* باشگاه */
+function renderClub(){const m=(n,v)=>`<div class="meter"><span><b>${n}</b><span>${v}٪</span></span><div class="bar"><i style="width:${v}%"></i></div></div>`;$('#meters').innerHTML=m('هیئت‌مدیره',S.board)+m('مربی',S.coach)+m('هواداران',S.fans);$('#setFm').value=S.fm||'';$('#setServer').value=S.server;$('#setToken').value=S.token;$('#results-list').innerHTML=S.results.length?S.results.slice().reverse().map(r=>`<div class="item"><span class="ovr" style="${r.outcome==='W'?'background:#D6EFE2':r.outcome==='L'?'background:#F7DADA':''}">${{W:'برد',D:'مس',L:'باخت'}[r.outcome]}</span><div class="grow">${esc(r.text)}</div></div>`).join(''):'<p class="hint">هنوز بازی نشده.</p>'}
+$('#saveSet').onclick=()=>{S.fm=normUrl($('#setFm').value);S.server=normUrl($('#setServer').value);S.token=$('#setToken').value.trim();save();toast('ذخیره شد')};
+$('#sync').onclick=async()=>{S.fm=normUrl($('#setFm').value);const msg=$('#syncMsg');msg.textContent='⏳ همگام‌سازی...';try{if(S.fm){await fmSync(msg);return}msg.textContent='Worker تنظیم نشده'}catch(e){msg.textContent='⚠️ '+e.message}};
+$('#reset').onclick=()=>{if(confirm('فصل از اول شروع شود؟')){const f=S.fm,s=S.server,t=S.token;S={...fresh(),fm:f,server:s,token:t};save();show('club');renderHeader();toast('ریست شد')}};
+$('#fmTest').onclick=async()=>{const m=$('#syncMsg');S.fm=normUrl($('#setFm').value);if(!S.fm)return toast('آدرس Worker');save();m.textContent='⏳ تست...';try{const r=await fetch(S.fm+'/health');const d=await r.json();m.textContent=`✅ Worker سالم | نسخه: ${d.version||'—'} | endpoints: ${(d.endpoints||[]).join(', ')}`}catch(e){m.textContent='⚠️ '+e.message}};
+
+/* مالی */
+function renderFin(){$('#finBox').innerHTML=`<div class="meter"><span><b>بودجه</b><span>${S.budget.toLocaleString('fa-IR')} م€</span></span></div><p class="hint">مربی: <b>${esc(S.coachName||'—')}</b></p><h3>اسپانسرها</h3>`+(S.sponsors.length?S.sponsors.map(s=>`<div class="item"><div class="grow"><b>${esc(s.name)}</b></div><span class="ovr">${s.value} م€</span></div>`).join(''):'<p class="hint">ندارد</p>')}
+$('#finGo').onclick=()=>toast('برای اطلاعات مالی واقعی سرور پولی نیاز است');
+$('#powers').onclick=e=>{const b=e.target.closest('button');if(b){show('office');$('#msg').value=b.dataset.t;$('#msg').focus()}};
+$('#chips').onclick=e=>{const b=e.target.closest('button');if(b){$('#msg').value=b.dataset.t;$('#msg').focus()}};
+
+/* AI رایگان */
+function windowOpen(iso){const m=+iso.slice(5,7),d=+iso.slice(8,10);return m===1||(m===2&&d<=2)||(m>=7&&m<=8)||(m===6&&d>=15)||(m===9&&d<=1)}
+async function freeChat(text,s,history){
+  const open = windowOpen(s.date);
+  const next = S.fixtures.slice(0,3).map(f=>`${f.date} ${f.home.name}-${f.away.name}`).join(' | ');
+  const system = `تو موتور رول‌پلی واقع‌گرایانه «رئیس رئال مادرید» هستی. کاربر فلورنتینو پرز است.
+تاریخ: ${s.date} | بودجه: ${s.budget} میلیون یورو | مربی: ${s.coachName||'ندارد'} | بازار نقل‌وانتقالات: ${open?'باز':'بسته'}
+
+قوانین اجباری:
+1. فقط فارسی، کوتاه، صحنه‌ای و واقعی بنویس.
+2. خرید بازیکن فرآیند چندمرحله‌ای واقعی دارد و نباید یک‌شبه تمام شود:
+   - مرحله ۱: ابراز علاقه و تماس اولیه با باشگاه فروشنده
+   - مرحله ۲: پیشنهاد رسمی (مبلغ)
+   - مرحله ۳: مذاکره با ایجنت و بازیکن (حقوق، بندها، مدت قرارداد)
+   - مرحله ۴: توافق اصولی
+   - مرحله ۵: معاینات پزشکی
+   - مرحله ۶: امضای قرارداد و ثبت
+   - مرحله ۷: اعلام رسمی (با خبر فابریزیو رومانو یا مارکا)
+   در هر مرحله فقط همان مرحله را پیش ببر. اگر پیشنهاد ضعیف باشد رد کن. action نوع sign فقط وقتی قرارداد واقعاً امضا شد بگذار.
+3. وقتی بازیکن جدید امضا می‌شود حتماً pos واقعی او را (GK/DF/MF/FW) درست مشخص کن.
+4. مربی ترکیب را می‌بندد، نه رئیس. رئیس فقط می‌تواند مربی را عوض کند.
+5. خبرها شبیه توییت واقعی باشند. اگر رومانو خواست از سبک «Here we go» استفاده کن.
+6. سخت‌گیر و واقع‌گرا باش. باشگاه‌ها و ایجنت‌ها ممکن است رد کنند.
+
+فقط یک JSON معتبر برگردان:
+{"narration":"متن صحنه","speaker":"José Mourinho|Fabrizio Romano|هیئت‌مدیره|ایجنت|باشگاه|رسانه","news":[{"src":"نام رسانه","headline":"متن کوتاه"}],"effects":{"board":0,"coach":0,"fans":0,"budget":0},"days":0,"actions":[{"type":"sign","name":"نام","pos":"GK|DF|MF|FW","age":25,"ovr":80,"value":50},{"type":"sell","name":""},{"type":"fire_coach"},{"type":"hire_coach","name":""},{"type":"release","name":""},{"type":"sponsor","name":"","value":0}]}
+
+ترکیب فعلی: ${s.squad.map(p=>`${p.name}|${p.pos}|${p.ovr}|${p.age}`).join('; ')}
+بازی‌های بعدی: ${next}
+رضایت: هیئت‌مدیره ${s.board} | مربی ${s.coach} | هواداران ${s.fans}`;
+
+  const msgs = history.filter(m=>m.role==='me'||m.role==='ai').map(m=>({role:m.role==='me'?'user':'assistant',content:m.text||'...'}));
+  while(msgs.length && msgs[0].role!=='user') msgs.shift();
+  const clean = [];
+  for(const m of msgs){ if(clean.length && clean[clean.length-1].role===m.role) clean[clean.length-1].content += '\n'+m.content; else clean.push(m); }
+  if(clean.length && clean[clean.length-1].role==='user') clean.pop();
+  clean.push({role:'user', content:text});
+
+  const r = await fetch(S.fm.replace(/\/$/,'')+'/ai', {method:'POST', body:JSON.stringify({system, messages:clean})});
+  const d = await r.json();
+  if(!r.ok || d.error) throw new Error(d.error || r.status);
+  const txt = d.text || '';
+  const out = parseJSON(txt);
+  if(!out.narration) out.narration = txt;
+  out.verified = false;
+  return out;
+}
+function parseJSON(t){t=String(t).replace(/```json|```/g,'');const a=t.indexOf('{'),b=t.lastIndexOf('}');if(a>=0&&b>a){try{return JSON.parse(t.slice(a,b+1))}catch{}}return{narration:t.slice(0,500),news:[]}}
+function tweetHTML(n){const src=String(n.src||'خبر'),q=String(n.headline||''),m=MEDIA.find(x=>x.name===src)||MEDIA[0];return`<div class="tw"><img class="tw-av" src="${m.img}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(src)}&background=0B1D3F&color=fff'"><div class="tw-b"><div class="tw-h"><b>${esc(src)}</b><span class="tick">✔</span><small>${esc(m.handle)}</small></div><div class="tw-t">${esc(q)}</div><div class="tw-f"><span>💬 ۴۲</span><span>🔁 ۱۸</span><span>❤ ۲۱۰</span><span>الان</span></div></div></div>`}
+function showTweets(list){const box=$('#tweets');(list||[]).slice(0,3).forEach((n,i)=>setTimeout(()=>{const d=document.createElement('div');d.className='tw-pop';d.innerHTML=tweetHTML(n);d.onclick=()=>d.remove();box.appendChild(d);setTimeout(()=>d.remove(),8000)},i*1200))}
+
+/* FotMob */
+const FMRM=8633,fmCache=new Map();
+async function fm(path,kind='page'){const key=kind+path,c=fmCache.get(key);if(c&&Date.now()-c.t<600000)return c.d;const url=S.fm.replace(/\/$/,'')+(kind==='search'?'/search?term='+encodeURIComponent(path):'/page?path='+encodeURIComponent(path));const r=await fetch(url);let d;try{d=await r.json()}catch{throw new Error('پاسخ نامعتبر')}if(!r.ok||d.error)throw new Error(d.error||r.status);fmCache.set(key,{t:Date.now(),d});return d}
+function fmWalk(o,f,depth=0){if(!o||typeof o!=='object'||depth>14)return;f(o);for(const k in o)fmWalk(o[k],f,depth+1)}
+const fmPos=t=>{t=String(t).toLowerCase();return/coach/.test(t)?'coach':/keep|goal/.test(t)?'GK':/def/.test(t)?'DF':/mid/.test(t)?'MF':/att|forw|strik/.test(t)?'FW':''};
+function fmSquad(d){const players=[],seen=new Set();let coach='';fmWalk(d,o=>{if(typeof o.title!=='string'||!Array.isArray(o.members))return;const pos=fmPos(o.title);o.members.forEach(m=>{if(!m||!m.name||seen.has(m.id))return;seen.add(m.id);if(pos==='coach'){coach=coach||m.name;return}if(pos)players.push({id:+m.id,name:m.name,pos,age:+m.age||26,ovr:74,rated:false})})});return{players,coach}}
+async function fmSync(msg){msg.textContent='⏳ دریافت از FotMob...';const d=await fm(`/teams/${FMRM}/overview/real-madrid`);const sq=fmSquad(d);if(sq.players.length<10)throw new Error('ترکیب پیدا نشد');const kept=S.squad.filter(p=>S.moved[p.name]==='RM');S.squad=sq.players.filter(p=>S.moved[p.name]!=='out');kept.forEach(k=>{if(!S.squad.some(p=>p.name===k.name))S.squad.push(k)});if(sq.coach&&!S.coachEdited)S.coachName=sq.coach;S.lineup=[];S.real=true;save();renderHeader();msg.textContent=`✅ ${S.squad.length} بازیکن، مربی: ${S.coachName||'—'}`}
+async function fmSearch(q,box){const d=await fm(q,'search');const list=(d.squadMemberSuggest||[]).flatMap(g=>g.options||[]).map(o=>{const p=o.payload||{},t=String(o.text||'').split('|');return{id:p.id||t[1],name:p.name||p.title||t[0],teamName:p.teamName||t[3],isCoach:p.isCoach??(t[4]==='true')}}).filter(p=>p.id&&p.name&&(kind==='coach'?p.isCoach:!p.isCoach));box.innerHTML=list.length?list.slice(0,15).map(p=>`<div class="item" data-n="${esc(p.name)}" data-id="${p.id}"><img class="ph" src="https://images.fotmob.com/image_resources/playerimages/${p.id}.png" onerror="this.remove()"><div class="grow"><b>${esc(p.name)}</b><small>${esc(p.teamName||'')}</small></div><button class="o primary">${kind==='coach'?'مذاکره':'پیشنهاد'}</button></div>`).join(''):'<p class="hint">پیدا نشد</p>'}
+function photo(p){if(typeof p.id!=='number')return'';return`<img class="ph" loading="lazy" src="https://images.fotmob.com/image_resources/playerimages/${p.id}.png" onerror="this.remove()">`}
+async function openProfile(kind,id,name){const m=$('#modal');m.hidden=false;m.innerHTML='<div class="card"><button class="x">✕</button><div id="pf"><p class="hint">⏳...</p></div></div>';m.onclick=e=>{if(e.target===m||e.target.classList.contains('x'))m.hidden=true};const pf=$('#pf'),loc=S.squad.find(x=>String(x.id)===String(id));if(S.fm&&!isNaN(+id)){try{const d=await fm(`/players/${id}/x`);pf.innerHTML=`<h3>${esc(name||loc?.name||'پروفایل')}</h3><p class="hint">داده از FotMob دریافت شد.</p>`}catch{pf.innerHTML=`<h3>${esc(name||loc?.name)}</h3><p class="hint">${loc?loc.pos+' · '+loc.age+' ساله · رتبه '+loc.ovr:''}</p>`}return}pf.innerHTML=`<h3>${esc(loc?.name||name)}</h3><p class="hint">${loc?loc.pos+' · '+loc.age+' ساله · رتبه '+loc.ovr:''}</p>`}
+
+S.fm=normUrl(S.fm||'https://madrid.mmdcodmi81.workers.dev');
+show('office');
+</script>
+</body>
+</html>
